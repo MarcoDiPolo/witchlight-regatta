@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Witchlight Regatta</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="rules.js"></script>
+    <script defer src="art.js"></script>
+    <script defer src="booth.js"></script>
+</head>
+<body>
+<main>
+    <header><span class="emblem" aria-hidden="true">✷</span><strong>Witchlight Regatta</strong><span id="record">Booth best · 0</span>
+    </header>
+    <section id="lobby">
+        <div class="intro"><p class="eyebrow">The lantern keepers</p>
+            <h1>Witchlight<br><i>Regatta</i></h1>
+            <p class="pitch">Keep the ghost ships off the rocks. Flash your lantern when its beam crosses the golden
+                gate.</p>
+            <div class="modes">
+                <button id="duel">Two keepers</button>
+                <button id="solo" class="secondary">Solo watch</button>
+            </div>
+            <p class="hint" id="courseHint">Five signals · One key per keeper · Same tide for both</p></div>
+        <div class="poster">
+            <canvas id="poster" width="680" height="560"
+                    aria-label="An enchanted lighthouse under a moonlit sky"></canvas>
+        </div>
+    </section>
+    <section id="match" hidden>
+        <div class="headline">
+            <div><p class="eyebrow" id="phase">The crossing</p>
+                <h2 id="signal">Signal 1 / 5</h2></div>
+            <p class="dir" id="instructions">Flash inside the gold gate.</p></div>
+        <div id="lanes">
+            <article class="lane" data-player="0">
+                <div class="cap"><h3>West keeper</h3>
+                    <output id="score0">0</output>
+                </div>
+                <canvas id="scope0" aria-label="West beacon scope with a revolving beam and a gold gate"></canvas>
+                <button class="flash" data-index="0"><kbd>A</kbd> Flash west</button>
+                <p class="result" id="feedback0" role="status"></p></article>
+            <article class="lane" data-player="1">
+                <div class="cap"><h3>East keeper</h3>
+                    <output id="score1">0</output>
+                </div>
+                <canvas id="scope1" aria-label="East beacon scope with a revolving beam and a gold gate"></canvas>
+                <button class="flash" data-index="1"><kbd>L</kbd> Flash east</button>
+                <p class="result" id="feedback1" role="status"></p></article>
+        </div>
+    </section>
+    <section id="end" hidden>
+        <p class="eyebrow">The crossing is over</p>
+        <h2 id="verdict"></h2>
+        <p class="total" id="tally"></p>
+        <table>
+            <caption>Signal log</caption>
+            <thead>
+            <tr>
+                <th>Signal</th>
+                <th>West</th>
+                <th class="east">East</th>
+            </tr>
+            </thead>
+            <tbody id="log"></tbody>
+        </table>
+        <div class="modes">
+            <button id="again">Play again</button>
+            <button id="home" class="secondary">Change crew</button>
+        </div>
+        <p class="hint" id="resetNote"></p>
+    </section>
+</main>
+</body>
+</html>

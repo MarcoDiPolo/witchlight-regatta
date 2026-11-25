@@ -1,0 +1,29 @@
+1
+00:00:00,300 --> 00:00:03,400
+Two keepers share a tournament course.
+Both dials show the same five gates.
+
+2
+00:00:03,700 --> 00:00:07,800
+Press A on the west side or L on the east.
+Flash when the beam reaches the golden gate.
+
+3
+00:00:08,000 --> 00:00:11,500
+A flash near the centre earns up to 100 points.
+Each keeper gets one flash per ship.
+
+4
+00:00:11,800 --> 00:00:15,100
+West guides the third ship.
+East flashes outside the gate and scores zero.
+
+5
+00:00:15,400 --> 00:00:18,900
+Five signals decide the heat.
+The same course can be replayed at another station.
+
+6
+00:00:19,400 --> 00:00:22,700
+West wins, 414 to 275.
+The harbour log shows the score for every ship.
