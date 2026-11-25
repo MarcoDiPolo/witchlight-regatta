@@ -9,7 +9,7 @@ from urllib.parse import urlencode
 
 
 def make_course(name: str) -> str:
-    """Return an eight-digit course ID for a printable event name."""
+    """Return an eight-character course ID for a printable event name."""
     folded = unicodedata.normalize("NFKC", name).casefold().replace("’", "'")
     words = " ".join(unicodedata.normalize("NFC", folded).split())
     valid_characters = all(char.isalnum() or char in " '-" for char in words)
@@ -27,7 +27,7 @@ def course_url(index_path: Path, course: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("event",
-                        help="The same event name gives the same course on every device.")
+                        help="Use the same event name at every station.")
     parser.add_argument("--open", action="store_true",
                         help="Open the course in the default browser.")
     args = parser.parse_args()

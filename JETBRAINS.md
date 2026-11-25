@@ -6,7 +6,9 @@ A host typing *Régate d’hiver* exposed a problem. One keyboard produces a sin
 
 The launcher now normalises case, accents, apostrophes and whitespace before hashing the name. Both spellings produce course `29CDE0C2`. A subsequent run passed all four desk tests. They cover course identity, spelling variants, invalid names and offline launch links.
 
-The PyCharm IDE ran in the background through its native Windows launcher, build `PC-252.28539.168`. Its formatter processed the launcher, its regression test and the game’s HTML entry point with the repository's code style settings. The project module and inspection profile are in `.idea/`. The entry uses the Community IDE's local development tools.
+The PyCharm IDE ran in the background through its native Windows launcher, build `PC-252.28539.168`. Its formatter processed the launcher, its regression test and the game's HTML entry point with the repository's code style settings. The [project module](Witchlight.iml) and [inspection profile](.idea/inspectionProfiles/Booth.xml) are included.
+
+The IDE's code inspection also flagged a 90-character command-line help line against the project's 88-character limit. The shorter message tells tournament staff to use the same event name at every station.
 
 To repeat the spelling check from the project root, run:
 
